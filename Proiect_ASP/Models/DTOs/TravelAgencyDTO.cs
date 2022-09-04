@@ -8,7 +8,7 @@ namespace Proiect_ASP.Models.DTOs
     public class TravelAgencyDTO
     {
         public string Name { get; set; }
-        //public int OwnerId { get; set; }
+        public int OwnerId { get; set; }
         public int UserId { get; set; }
     }
 }

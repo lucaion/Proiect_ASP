@@ -18,7 +18,7 @@ namespace Proiect_ASP.Repositories
             TravelAgency newTravelAgency = new TravelAgency();
 
             newTravelAgency.Name = dto.Name;
-            //newTravelAgency.OwnerId = dto.OwnerId;
+            newTravelAgency.OwnerId = dto.OwnerId;
             newTravelAgency.UserId = dto.UserId;
 
             Create(newTravelAgency);
@@ -35,7 +35,7 @@ namespace Proiect_ASP.Repositories
 
             newTravelAgency.Id = id;
             newTravelAgency.Name = dto.Name;
-            //newTravelAgency.OwnerId = dto.OwnerId;
+            newTravelAgency.OwnerId = dto.OwnerId;
             newTravelAgency.UserId = dto.UserId;
 
             Update(newTravelAgency);
