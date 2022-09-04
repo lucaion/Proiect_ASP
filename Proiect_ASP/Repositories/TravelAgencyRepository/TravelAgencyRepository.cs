@@ -13,7 +13,7 @@ namespace Proiect_ASP.Repositories
     {
         public TravelAgencyRepository(AppDbContext context) : base(context) { }
 
-        public async void CreateTravelAgency(TravelAgencyDTO dto)
+        public void CreateTravelAgency(TravelAgencyDTO dto)
         {
             TravelAgency newTravelAgency = new TravelAgency();
 
@@ -29,7 +29,7 @@ namespace Proiect_ASP.Repositories
             return await _context.TravelAgencies.Where(tr => tr.UserId.Equals(id)).ToListAsync();
         }
 
-        public async void UpdateTravelAgency(int id, TravelAgencyDTO dto)
+        public void UpdateTravelAgency(int id, TravelAgencyDTO dto)
         {
             TravelAgency newTravelAgency = new TravelAgency();
 

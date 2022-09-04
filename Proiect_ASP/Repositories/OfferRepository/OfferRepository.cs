@@ -13,7 +13,7 @@ namespace Proiect_ASP.Repositories
     {
         public OfferRepository(AppDbContext context) : base(context) { }
 
-        public async void CreateOffer(OfferDTO dto)
+        public void CreateOffer(OfferDTO dto)
         {
             Offer newOffer = new Offer();
 
@@ -28,7 +28,7 @@ namespace Proiect_ASP.Repositories
             return await _context.Offers.Where(of => of.Id.Equals(id)).ToListAsync();
         }
 
-        public async void UpdateOffer(int id, OfferDTO dto)
+        public void UpdateOffer(int id, OfferDTO dto)
         {
             Offer newOffer = new Offer();
 

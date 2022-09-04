@@ -13,7 +13,7 @@ namespace Proiect_ASP.Repositories
     {
         public OwnerRepository(AppDbContext context) : base(context) { }
 
-        public async void CreateOwner(OwnerDTO ownerDTO)
+        public void CreateOwner(OwnerDTO ownerDTO)
         {
             Owner newOwner = new Owner();
 
@@ -29,7 +29,7 @@ namespace Proiect_ASP.Repositories
             return await _context.Owners.Where(o => o.Id.Equals(id)).ToListAsync();
         }
 
-        public async void UpdateOwner(int id, OwnerDTO ownerDTO)
+        public void UpdateOwner(int id, OwnerDTO ownerDTO)
         {
             Owner newOwner = new Owner();
 
