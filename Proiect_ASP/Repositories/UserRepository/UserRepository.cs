@@ -29,7 +29,7 @@ namespace Proiect_ASP.Repositories
 
         public async Task<User> GetUserByEmail(string email)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(email));
+            return await _context.Users.Where(u => u.Email.Equals(email)).FirstOrDefaultAsync();
         }
 
         public async void UpdateUser(int id, UserDTO dto)
